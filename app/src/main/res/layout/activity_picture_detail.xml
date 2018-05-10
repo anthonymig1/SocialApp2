@@ -5,12 +5,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
     tools:context=".view.PictureDetailActivity">
 
     <android.support.design.widget.AppBarLayout
         android:id="@+id/appBar"
         android:layout_width="match_parent"
         android:layout_height="@dimen/appbar__layout_height"
+        android:fitsSystemWindows="true"
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
         <android.support.design.widget.CollapsingToolbarLayout
 
@@ -26,6 +28,7 @@
                 android:scaleType="centerCrop"
                 android:background="@drawable/image"
                 app:layout_collapseMode="parallax"
+                android:transitionName="@string/transitionname_picture"
                 />
 
             <android.support.v7.widget.Toolbar
@@ -130,8 +133,8 @@
         android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        app:srcCompat="@drawable/heart"
         android:layout_margin="@dimen/fab_margin"
-        app:srcCompat="@android:drawable/ic_dialog_email"
         app:layout_anchor="@id/appBar"
         app:layout_anchorGravity="bottom|end"
         />
